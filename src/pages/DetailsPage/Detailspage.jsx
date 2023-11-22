@@ -11,7 +11,7 @@ const Detailspage = () => {
     const [loading, setloading] = useState(true)
 
     useEffect(()=>{
-        fetch(`http://localhost:3000/partners?name_like=${name}`).then(res => res.json()).then((data) => {
+        fetch(`https://logoipsum-server.onrender.com/partners?name_like=${name}`).then(res => res.json()).then((data) => {
             setDATA(data)
             setloading(false)
         }).catch(err => console.log(err))
